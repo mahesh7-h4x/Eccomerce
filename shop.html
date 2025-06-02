@@ -1,0 +1,1218 @@
+<style>
+    :root {
+    --primary: #6c5ce7;
+    --secondary: #a29bfe;
+    --dark: #2d3436;
+    --light: #f5f6fa;
+    --success: #00b894;
+    --danger: #d63031;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+    html{
+    scroll-behavior: smooth;
+
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    body {
+        background-color: inear-gradient(to right, rgb(50, 77, 75), hsl(352, 82%, 11%));
+        color: var(--dark);
+        overflow-x: hidden;
+    }
+    header {
+
+    background: rgba(255, 255, 255, 0.9); 
+    position: fixed;
+    width: 100%;
+    z-index: 100; 
+   
+      
+    }
+    .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: whitesmoke;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    }
+    
+    .logo {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--primary);
+        text-decoration: none;
+    }
+    
+    .logo span {
+        color: var(--dark);
+    }
+    
+    .nav-links {
+        display: flex;
+        gap: 2rem;
+    }
+    
+    .nav-links a {
+        text-decoration: none;
+        color: var(--dark);
+        font-weight: 500;
+        transition: var(--transition);
+    }
+    
+    .nav-links a:hover {
+        color: green;
+    }
+     .section-title {
+        text-align: center;
+        margin: 4rem 0 2rem;
+        font-size: 2.2rem;
+        color: var(--dark);
+    }
+    .men-img img {
+        width: 100%;
+        height: 100%;
+        padding: 50px;
+        align-items: center;
+    }
+    
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 0 5%;
+    max-width: 1400px;
+    margin: 0 auto 4rem;
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.product-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: var(--success);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.product-img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 1.5rem;
+}
+
+.product-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-price {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.product-price span {
+    color: var(--dark);
+    text-decoration: line-through;
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+    opacity: 0.7;
+}
+
+.product-rating {
+    color: #fdcb6e;
+    margin-bottom: 1rem;
+}
+
+.product-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-to-cart {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.add-to-cart:hover {
+    background: #5649d1;
+}
+
+.wishlist {
+    background: transparent;
+    border: 1px solid #ddd;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.wishlist:hover {
+    background: #f8f8f8;
+    color: var(--danger);
+    border-color: var(--danger);
+}
+.btn {
+    
+    text-decoration: none;
+    background-color: #da2acc;
+    padding: 20px;
+    text-align: center;
+    text-transform: capitalize;
+}
+.btn:hover {
+    background-color: red;
+text-align: center;
+transform: translateY(-3px);
+}
+
+</style>
+
+<header>
+    <nav class="navbar">
+        <a href="#" class="logo">Lumina<span>Shop</span></a>
+        
+        <div class="nav-links">
+            <a href="#mens">men</a>
+            <a href="#women">Women</a>
+            <a href="#">Kides</a>
+            <a href="#">babies</a>
+        </div>
+        
+    </nav>
+</header>
+
+<body>
+ 
+
+<div class="men-img" id="mens">
+    <img src="img2.jpg">
+</div>
+
+<div class="products">
+   
+    <div class="product-card">
+        <span class="product-badge">Sale</span>
+        <img src="2.jpeg" alt="Product 1" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Wireless Headphones</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(124)</span>
+            </div>
+            <div class="product-price">$89.99 <span>$129.99</span></div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="product-card">
+        <img src="3.jpeg" alt="Product 2" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Smart Watch Pro</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <span>(89)</span>
+            </div>
+            <div class="product-price">$199.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <span class="product-badge">New</span>
+        <img src="4.jpeg" alt="Product 3" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Leather Backpack</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>(256)</span>
+            </div>
+            <div class="product-price">$79.99 <span>$99.99</span></div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="5.jpeg" alt="Product 4" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Running Shoes</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(312)</span>
+            </div>
+            <div class="product-price">$129.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="6.jpeg" alt="Product 4" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Running Shoes</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(312)</span>
+            </div>
+            <div class="product-price">$129.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="11.jpeg" alt="Product 4" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Running Shoes</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(312)</span>
+            </div>
+            <div class="product-price">$129.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="12.jpeg" alt="Product 4" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Running Shoes</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(312)</span>
+            </div>
+            <div class="product-price">$129.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="13.jpg" alt="Product 4" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Running Shoes</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(312)</span>
+            </div>
+            <div class="product-price">$129.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="74.jpeg" alt="Product 4" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Running Shoes</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(312)</span>
+            </div>
+            <div class="product-price">$129.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="men1.jpg" alt="Product 4" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Running Shoes</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(312)</span>
+            </div>
+            <div class="product-price">$129.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="20.jpeg" alt="Product 4" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Running Shoes</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(312)</span>
+            </div>
+            <div class="product-price">$129.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="21.jpeg" alt="Product 4" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Running Shoes</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(312)</span>
+            </div>
+            <div class="product-price">$129.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<h2 class="section-title">--------Women Collection--------</h2>
+<div class="men-img" id="women">
+    <img src="women.webp">
+</div>
+
+
+<div class="products">
+   
+    <div class="product-card">
+        <span class="product-badge">Sale</span>
+        <img src="2.jpeg" alt="Product 1" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Wireless Headphones</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(124)</span>
+            </div>
+            <div class="product-price">$89.99 <span>$129.99</span></div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="product-card">
+        <img src="3.jpeg" alt="Product 2" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Smart Watch Pro</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <span>(89)</span>
+            </div>
+            <div class="product-price">$199.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <span class="product-badge">New</span>
+        <img src="4.jpeg" alt="Product 3" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Leather Backpack</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>(256)</span>
+            </div>
+            <div class="product-price">$79.99 <span>$99.99</span></div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="5.jpeg" alt="Product 4" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Running Shoes</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(312)</span>
+            </div>
+            <div class="product-price">$129.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="6.jpeg" alt="Product 4" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Running Shoes</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(312)</span>
+            </div>
+            <div class="product-price">$129.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="11.jpeg" alt="Product 4" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Running Shoes</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(312)</span>
+            </div>
+            <div class="product-price">$129.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="12.jpeg" alt="Product 4" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Running Shoes</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(312)</span>
+            </div>
+            <div class="product-price">$129.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="13.jpg" alt="Product 4" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Running Shoes</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(312)</span>
+            </div>
+            <div class="product-price">$129.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="74.jpeg" alt="Product 4" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Running Shoes</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(312)</span>
+            </div>
+            <div class="product-price">$129.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="men1.jpg" alt="Product 4" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Running Shoes</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(312)</span>
+            </div>
+            <div class="product-price">$129.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="20.jpeg" alt="Product 4" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Running Shoes</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(312)</span>
+            </div>
+            <div class="product-price">$129.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="21.jpeg" alt="Product 4" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Running Shoes</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(312)</span>
+            </div>
+            <div class="product-price">$129.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<h2 class="section-title">--------Kids Collection--------</h2>
+<div class="men-img" id="women">
+    <img src="kids2.jpg">
+</div>
+
+
+<div class="products">
+   
+    <div class="product-card">
+        <span class="product-badge">Sale</span>
+        <img src="2.jpeg" alt="Product 1" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Wireless Headphones</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(124)</span>
+            </div>
+            <div class="product-price">$89.99 <span>$129.99</span></div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="product-card">
+        <img src="3.jpeg" alt="Product 2" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Smart Watch Pro</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <span>(89)</span>
+            </div>
+            <div class="product-price">$199.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <span class="product-badge">New</span>
+        <img src="4.jpeg" alt="Product 3" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Leather Backpack</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>(256)</span>
+            </div>
+            <div class="product-price">$79.99 <span>$99.99</span></div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="5.jpeg" alt="Product 4" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Running Shoes</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(312)</span>
+            </div>
+            <div class="product-price">$129.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="6.jpeg" alt="Product 4" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Running Shoes</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(312)</span>
+            </div>
+            <div class="product-price">$129.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="11.jpeg" alt="Product 4" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Running Shoes</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(312)</span>
+            </div>
+            <div class="product-price">$129.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="12.jpeg" alt="Product 4" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Running Shoes</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(312)</span>
+            </div>
+            <div class="product-price">$129.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="13.jpg" alt="Product 4" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Running Shoes</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(312)</span>
+            </div>
+            <div class="product-price">$129.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="74.jpeg" alt="Product 4" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Running Shoes</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(312)</span>
+            </div>
+            <div class="product-price">$129.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="men1.jpg" alt="Product 4" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Running Shoes</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(312)</span>
+            </div>
+            <div class="product-price">$129.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="20.jpeg" alt="Product 4" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Running Shoes</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(312)</span>
+            </div>
+            <div class="product-price">$129.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="21.jpeg" alt="Product 4" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Running Shoes</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(312)</span>
+            </div>
+            <div class="product-price">$129.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+h2 class="section-title">--------Babies Collection--------</h2>
+<div class="men-img" id="women">
+    <img src="baby.webp">
+</div>
+
+
+<div class="products">
+   
+    <div class="product-card">
+        <span class="product-badge">Sale</span>
+        <img src="2.jpeg" alt="Product 1" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Wireless Headphones</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(124)</span>
+            </div>
+            <div class="product-price">$89.99 <span>$129.99</span></div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="product-card">
+        <img src="3.jpeg" alt="Product 2" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Smart Watch Pro</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <span>(89)</span>
+            </div>
+            <div class="product-price">$199.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <span class="product-badge">New</span>
+        <img src="4.jpeg" alt="Product 3" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Leather Backpack</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>(256)</span>
+            </div>
+            <div class="product-price">$79.99 <span>$99.99</span></div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="5.jpeg" alt="Product 4" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Running Shoes</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(312)</span>
+            </div>
+            <div class="product-price">$129.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="6.jpeg" alt="Product 4" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Running Shoes</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(312)</span>
+            </div>
+            <div class="product-price">$129.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="11.jpeg" alt="Product 4" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Running Shoes</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(312)</span>
+            </div>
+            <div class="product-price">$129.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="12.jpeg" alt="Product 4" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Running Shoes</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(312)</span>
+            </div>
+            <div class="product-price">$129.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="13.jpg" alt="Product 4" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Running Shoes</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(312)</span>
+            </div>
+            <div class="product-price">$129.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="74.jpeg" alt="Product 4" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Running Shoes</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(312)</span>
+            </div>
+            <div class="product-price">$129.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="men1.jpg" alt="Product 4" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Running Shoes</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(312)</span>
+            </div>
+            <div class="product-price">$129.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="20.jpeg" alt="Product 4" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Running Shoes</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(312)</span>
+            </div>
+            <div class="product-price">$129.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="21.jpeg" alt="Product 4" class="product-img">
+        <div class="product-info">
+            <h3 class="product-title">Running Shoes</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(312)</span>
+            </div>
+            <div class="product-price">$129.99</div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a href="#" class="btn">Back to home</a>
+
+</div>
+</body>
